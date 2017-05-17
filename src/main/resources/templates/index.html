@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Heroku Demo</title>
+    
+    <link rel = "stylesheet" type = "text/css" href = "css/page_style.css" />
+    
+  </head>
+  <body>
+  
+  	<form action="/index.html" th:action="@{/index}"  th:object="${comment}" method="post">
+ 	<label>Your Name: </label>
+  	 <input type="text" th:field="*{commenterName}" placeholder="Enter Your Name" name="commenter_name" /><br/>
+  	 <label>Leave your comment: </label><br/>
+ 	 <input type="text" th:field="*{commentText}" placeholder="Enter any thing you want to say" name="comment_text" /><br/>
+ 	 <input type="submit" value="Submit" />
+	</form>  
+	
+	<th:block>
+		<ul>
+			<th:block th:each="c : ${allComments}">
+				<li><b><label th:text="${c.commentText}"></label></b><br/><label th:text="'By: ' + ${c.commenterName}"></label></li>
+			</th:block>
+		</ul>
+	</th:block>
+	
+	
+	
+  </body>
+</html>
