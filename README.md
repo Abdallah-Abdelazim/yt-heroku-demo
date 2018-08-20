@@ -13,7 +13,7 @@
 
 ---
 
-### To Enable MySQL Database:
+### Enable MySQL Database:
 1. Add Postgres database addon with this command:
 	`$ heroku addons:create heroku-postgresql`
 2. Add this dependency in the maven pom file (used for Postgres database addon that will enable our database to work):
@@ -25,9 +25,7 @@
 </dependency>
 ```
 
----
-
-Then edit the connection attributes in application.properties file to contain:
+3. Then edit the connection attributes in application.properties file to contain:
 ```
 spring.datasource.url=${JDBC_DATABASE_URL}
 spring.datasource.username=${JDBC_DATABASE_USERNAME}
@@ -43,6 +41,6 @@ After that change it to `update` and commit and push once more. (i.e. `$ git add
 
 ---
 
-**This tutorial is based on the following two articles (and other):**  
+### This tutorial is based on the following two articles (and others):
 https://devcenter.heroku.com/articles/deploying-spring-boot-apps-to-heroku  
 https://devcenter.heroku.com/articles/connecting-to-relational-databases-on-heroku-with-java  
