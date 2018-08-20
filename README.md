@@ -1,6 +1,6 @@
-# Deploy Spring-boot websites on Heroku
+# Deploy Spring-Boot websites on Heroku
 1. Download Heroku CLI: https://devcenter.heroku.com/articles/deploying-spring-boot-apps-to-heroku
-2. Commands:  
+2. Commands (without the preceding $ sign):  
 	`$ heroku login`  
 	`$ git init`  
 	`$ git add .`  
@@ -37,7 +37,7 @@ spring.jpa.hibernate.ddl-auto=create
 
 **Important note**:  
 It's important that at first time you leave this last line and set it `create` so that your database gets created. 
-After that change it to `update` and commit and push once more. (i.e. `$ git add .` && `$ git commit -m "Edit application.properties"` && `$ git push heroku master`).
+After that change it to `update` and commit and push once more. (i.e. `$ git add .` , `$ git commit -m "Edit application.properties"` & `$ git push heroku master`).
 
 ---
 
