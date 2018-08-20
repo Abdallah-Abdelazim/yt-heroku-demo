@@ -1,4 +1,4 @@
-# Deploy Spring-Boot websites on Heroku
+# Deploy Spring Boot applications on Heroku
 1. Download Heroku CLI: https://devcenter.heroku.com/articles/deploying-spring-boot-apps-to-heroku
 2. Commands (without the preceding $ sign):  
 	`$ heroku login`  
